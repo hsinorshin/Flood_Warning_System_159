@@ -27,9 +27,9 @@ def stations_by_distance(stations,p):
 def stations_within_radius(stations,centre,r):
     within_r_list=[]
     for i in stations:
-        distance= float(haversine(MonitoringStation(i).coord,centre))
-        if float(distance) < float(r):
-            within_r_list.append(i,distance)
+        distance= float(haversine(i.coord,centre))
+        if distance < r:
+            within_r_list.append(i.name)
 
     return within_r_list
 

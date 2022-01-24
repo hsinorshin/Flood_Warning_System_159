@@ -4,8 +4,7 @@ from floodsystem.stationdata import build_station_list
 
 def run(p):
     '''requirements for task1B'''
-    closest_list=[]
-    furthest_list=[]
+   
     #build list of stations
     stations = build_station_list()
     #list of tuple(station,distance) sorted in ascending order
