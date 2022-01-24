@@ -35,24 +35,29 @@ def stations_within_radius(stations,centre,r):
 
 def rivers_with_station(stations):
 
-    river_set={}
+    river_set=set({})
     for i in stations:
         river=i.river
         river_set.add(river)
     return river_set
 
 def stations_by_river(stations):
+    '''function which returns a list of stations by a river'''
+    #create empty dictionary
     river_dict={}
-    for i in stations:
-        station_objects=[]
-        station_id=i.station_id
-        measure_id=i.measure_id
-        name=i.name
-        coord=i.coord
-        typical_range=i.typical_range
-        town=i.town
-        station_objects.append(station_id,measure_id,name,coord,typical_range,town)
-        river_dict[i.river]=(station_objects)
+    #create list of river with >1 stations
+    river=rivers_with_station(stations)
+    
+    for i in river:
+        #list of station by a particular river
+        station_list=[]
+        #loop over stations list to find stations by a river
+        for x in stations:
+            if x.river==i:
+                station=x.name
+                station_list.append(station)
+        #create key,value pair in dict
+        river_dict[i]=(station_list)
     
     return river_dict
 
