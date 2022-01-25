@@ -1,8 +1,8 @@
 from floodsystem.stationdata import build_station_list
 from floodsystem.geo import *
-
+'''requirements for task 1D'''
 def run():
-    
+   
      # Build list of stations
     stations = build_station_list()
     #extract number of rivers with at least one station
@@ -23,5 +23,9 @@ def run2():
     print('Stations by River Aire : {} \n Stations by River Cam: {}\n Stations by River Thames: {}\n'.format(river_aire,river_cam,river_thames))
 
 
-run()
-run2()
+
+
+if __name__ == "__main__":
+    print("*** Task 1D: CUED Part IA Flood Warning System ***")
+    run()
+    run2()

@@ -39,4 +39,8 @@ def run(p):
     print('The 10 furthest station from Cambridge city centre is {}'.format(furthest_list))
    
     
-run((52.2053,0.1218))
+
+
+if __name__ == "__main__":
+    print("*** Task 1B: CUED Part IA Flood Warning System ***")
+    run((52.2053,0.1218))
