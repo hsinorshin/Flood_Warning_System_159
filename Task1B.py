@@ -3,17 +3,19 @@ from floodsystem.geo import stations_by_distance
 from floodsystem.stationdata import build_station_list
 
 def run(p):
-    '''requirements for task1B'''
+    '''This function outputs the 10 furthest and closest stations from the given point.
+    Each output list is sorted based on distance, from closest to furthest'''
    
     #build list of stations
     stations = build_station_list()
     #list of tuple(station,distance) sorted in ascending order
     list=stations_by_distance(stations,p)
+    #print(list)
 
     #extracts town name from stations list by checking if the stations name are equal
     closest_list=[(x[0],y.town,x[1]) for x in list[:10] for y in stations if x[0]==y.name]
     furthest_list=[(x[0],y.town,x[1]) for x in list[-10:] for y in stations if x[0]==y.name]
-   
+    
   
     #to extract town name from list of stations if station name matches
     #for 10 closest station

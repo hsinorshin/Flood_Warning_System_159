@@ -2,7 +2,7 @@ from floodsystem.geo import stations_within_radius
 from floodsystem.stationdata import build_station_list
 
 def run(centre,r):
-    '''requirements for task 1C'''
+    '''This function outputs stations within 10km radius of the input point in alphabetical order'''
      #build list of stations
     stations = build_station_list()
 

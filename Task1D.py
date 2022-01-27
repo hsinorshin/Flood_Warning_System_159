@@ -20,7 +20,7 @@ def run2():
     river_cam=sorted(stations_by_river(stations)['River Cam'])
     river_thames=sorted(stations_by_river(stations)['River Thames'])
 
-    print('Stations by River Aire : {} \n Stations by River Cam: {}\n Stations by River Thames: {}\n'.format(river_aire,river_cam,river_thames))
+    print('Stations by River Aire : {}\n\nStations by River Cam: {}\n\nStations by River Thames: {}\n'.format(river_aire,river_cam,river_thames))
 
 
 
