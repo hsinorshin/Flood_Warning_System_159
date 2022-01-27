@@ -12,8 +12,8 @@ from haversine import haversine, Unit
 from operator import itemgetter
 
 def stations_by_distance(stations,p):
-    #this function calculates the distance between stations 
-    # and coordinate and forms a list of tuples sorted by distance
+    '''this function calculates the distance between stations 
+    and coordinate and forms a list of tuples sorted by distance'''
     distance_list=[]
     for i in stations:
         distance= float(haversine(i.coord,p))
@@ -25,6 +25,8 @@ def stations_by_distance(stations,p):
     return sorted_dlist
 
 def stations_within_radius(stations,centre,r):
+    '''function which returns a list of
+    the names of the stations within a certain radius from the centre'''
     within_r_list=[]
     for i in stations:
         distance= float(haversine(i.coord,centre))
@@ -34,6 +36,7 @@ def stations_within_radius(stations,centre,r):
     return within_r_list
 
 def rivers_with_station(stations):
+    '''function which returns set of rivers by stations'''
     #returns set of rivers with stations 
     river_set=set({})
     for i in stations:
@@ -62,8 +65,9 @@ def stations_by_river(stations):
     return river_dict
 
 def rivers_by_station_number(stations,N):
-    '''determines the N rivers with the greatest number of monitoring stations,returns list of tuples sorted 
-    by number of stations'''
+    '''this function determines the N rivers with
+    the greatest number of monitoring stations,
+    returns list of tuples sorted by number of stations'''
     river_list=[]
     #set of rivers 
     river=rivers_with_station(stations)
