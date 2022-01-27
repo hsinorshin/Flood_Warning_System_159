@@ -26,8 +26,8 @@ def test_create_monitoring_station():
     assert s.river == river
     assert s.town == town
 
-def test_repr():
+#def test_repr():
 
-def test_typical_range_consistent():
+#def test_typical_range_consistent():
 
-def test_inconsistent_typical_range_stations():
+#def test_inconsistent_typical_range_stations():
