@@ -79,13 +79,14 @@ def rivers_by_station_number(stations,N):
         river_list.append(river_tuple)
     #list organised in greatest number to least number of stations
     sorted_list=sorted_by_key(river_list,1,reverse=True)
+    print(sorted_list)
 
     counter=0
     #if the last element of list has the same number as the next few ones, print more than N rivers
     for x in range(N-1,len(river)):
-        if sorted_list[x] == sorted_list[x+1]:
+        if sorted_list[x][1] == sorted_list[x+1][1]:
             counter+=1
-      
+            print(counter)
         else: 
             break
     return sorted_list[:N+counter]
