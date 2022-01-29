@@ -167,4 +167,5 @@ def test_rivers_by_station_number():
     assert a==[('river4', 4)]
     b = rivers_by_station_number(stations_3,2)  #test that when the multiple rivers have the lowest, all are displayed
     assert len(b)==3
-    assert b==[('river4', 4), ('river2', 3), ('river1', 3)]
+    assert b[1][0]=='river2' or 'river1'
+    assert b[2][0]=='river2' or 'river1'
