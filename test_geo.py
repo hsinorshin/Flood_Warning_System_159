@@ -169,3 +169,4 @@ def test_rivers_by_station_number():
     assert len(b)==3
     assert b[1][0]=='river2' or 'river1'
     assert b[2][0]=='river2' or 'river1'
+    assert b[2][0] != b[1][0]
