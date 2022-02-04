@@ -26,7 +26,9 @@ def test_create_monitoring_station():
     assert s.river == river
     assert s.town == town
 
-#def test_repr():
+def test_repr():
+    string = 'Station name:     some station\n   id:            test-s-id\n   measure id:    test-m-id\n   coordinate:    (-2.0, 4.0)\n   town:          My Town\n   river:         River X\n   typical range: (-2.3, 3.4445)'
+    assert repr(s) == string
 
 #def test_typical_range_consistent():
 
