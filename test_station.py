@@ -51,6 +51,10 @@ def test_create_monitoring_station():
     assert s.river == river
     assert s.town == town
 
+def test_repr():
+    string = 'Station name:     label1\n   id:            10\n   measure id:    1\n   coordinate:    (0.1, 0.1)\n   town:          town1\n   river:         river1\n   typical range: None'
+    assert repr(s1) == string
+
 def test_typical_range_consistent():
     #test that the correct boolean returned for typical_range_consistent method
     r1=MonitoringStation.typical_range_consistent(s1)
@@ -68,5 +72,6 @@ def test_inconsistent_typical_range_stations():
     
     assert s1 in inconsistent
     assert s2 in inconsistent
-    assert s3 not in inconsistent 
+    assert s3 not in inconsistent
 
+test_repr()
