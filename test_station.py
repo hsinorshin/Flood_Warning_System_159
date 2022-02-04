@@ -74,4 +74,3 @@ def test_inconsistent_typical_range_stations():
     assert s2 in inconsistent
     assert s3 not in inconsistent
 
-test_repr()
