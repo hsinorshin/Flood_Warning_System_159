@@ -1,8 +1,8 @@
 from floodsystem.stationdata import build_station_list
 from floodsystem.geo import *
-'''requirements for task 1D'''
+
 def run():
-   
+    '''Gives a sorted list of stations based on alphabetcial order. Prints first 10 stations'''
      # Build list of stations
     stations = build_station_list()
     #extract number of rivers with at least one station
