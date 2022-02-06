@@ -10,5 +10,5 @@ def run(N):
 
 if __name__ == "__main__":
     print("*** Task 1E: CUED Part IA Flood Warning System ***")
-    run(12)
+    run(8)
 #this function takes a long time to perform , perhaps the algorithm isn't the most efficient 
