@@ -2,7 +2,7 @@ from floodsystem.stationdata import build_station_list
 from floodsystem.station import inconsistent_typical_range_stations
 
 def run():
-    '''requirement for Task 1F'''
+    '''Gives a sorted list of stations with inconsistent typical range data'''
     #build list of stations
     stations=build_station_list()
     #prints out sorted list of station name which have inconsitent typical ranges
