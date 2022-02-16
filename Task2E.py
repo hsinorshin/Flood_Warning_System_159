@@ -31,7 +31,7 @@ def run():
 
     a = []
     dt = 10
-    print(stations)
+    #print(stations)
     for station in stations:
         dates, levels = fetch_measure_levels(
         station.measure_id, dt=datetime.timedelta(days=dt))
