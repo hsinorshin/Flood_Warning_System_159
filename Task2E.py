@@ -12,10 +12,26 @@ def run():
     stations = build_station_list()
     update_water_levels(stations)
     number = 5
+    dt = 1
+
+    #this works, but takes forever
+    
+    #for station in stations:
+    #    dates, levels = fetch_measure_levels(
+    #    station.measure_id, dt=datetime.timedelta(days=dt))
+    #    if levels == []:
+    #        stations.remove(station)
+
+
+    for station in stations:
+        if station.name == 'Letcombe Bassett':
+            stations.remove(station)
+    
     stations = stations_highest_rel_level(stations,number)
-    dt = 10
+
     a = []
-    #print(stations)
+    dt = 10
+    print(stations)
     for station in stations:
         dates, levels = fetch_measure_levels(
         station.measure_id, dt=datetime.timedelta(days=dt))

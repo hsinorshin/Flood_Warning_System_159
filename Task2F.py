@@ -13,6 +13,11 @@ def run():
     stations = build_station_list()
     update_water_levels(stations)
     number = 5
+
+    for station in stations:
+        if station.name == 'Letcombe Bassett':
+            stations.remove(station)
+    
     stations = stations_highest_rel_level(stations,number)
     #print(stations)
     dt = 10

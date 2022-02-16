@@ -43,7 +43,9 @@ class MonitoringStation:
         if self.typical_range is None:
             return False
         elif float(self.typical_range[0]) < float(self.typical_range[1]):
-            return True 
+            return True
+        elif float(self.typical_range[0]) > 200 or float(self.typical_range[1]) > 200:
+            return False
         else:
             return False
 
