@@ -1,6 +1,6 @@
 
 from .utils import sorted_by_key  
-
+from .station import MonitoringStation
 
 
 def stations_level_over_threshold(stations,tol):
@@ -28,8 +28,7 @@ def stations_highest_rel_level(stations, N):
 
     for station in stations:
         water_lvl=station.relative_water_level()
-        if water_lvl!=None :
-            
+        if water_lvl!=None:
             list.append((station,water_lvl))
     top_list=sorted_by_key(list,1,reverse=True)
     list=[station[0] for station in top_list[:N]]
