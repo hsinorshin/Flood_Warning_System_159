@@ -16,7 +16,7 @@ from floodsystem.flood import stations_highest_rel_level
 def run():
     # Build list of stations
     stations = build_station_list()
-    #stations = stations[30:80]
+    stations = stations[0:80]
     update_water_levels(stations)
     dt = 5
     low = []
